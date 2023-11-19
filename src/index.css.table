@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply flex justify-center text-slate-900
+  }
+  
+  th,td {
+    /* @apply border text-left p-4 w-1/4  */
+    @apply text-left p-4 w-1/4 
+  }
+
+  tbody tr {
+    @apply odd:bg-teal-50 even:bg-slate-200
+  }
+
+}

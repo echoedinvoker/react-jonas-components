@@ -1,0 +1,28 @@
+import { CaretDown, CaretUp } from "@phosphor-icons/react"
+import data from './data'
+import { useState } from "react"
+
+function App() {
+  const [index, setIndex] = useState(null)
+
+  return <div className="w-[700px] my-[100px] mx-auto flex flex-col gap-6">
+    {data.map((d, i) =>
+      <div className={`grid grid-cols-[auto_1fr_auto] gap-4 ${i === index ? 'border-t-4' : ''} border-teal-700 shadow-xl p-5`}>
+        <p className={`text-2xl font-semibold ${i === index ? 'text-teal-700' : 'text-slate-400'} mb-4`}>{(i + 1).toString().padStart(2, '0')}</p>
+        <p className={`text-2xl font-semibold ${i === index ? 'text-teal-700' : 'text-slate-700'} `}>{d.title}</p>
+        {i === index
+          ? <CaretUp className="fill-teal-700" size={24} weight="bold" onClick={() => setIndex(null)} />
+          : <CaretDown className="fill-teal-700" size={24} weight="bold" onClick={() => setIndex(i)} />
+        }
+        <div className={`col-[2] text-base ${i === index ? '' : 'hidden'}`}>
+          <p className="mb-5">{d.description}</p>
+          <ul className="list-disc ml-5 text-slate-700 flex flex-col gap-2">
+            {d.listItems.map(item => <li>{item}</li>)}
+          </ul>
+        </div>
+      </div>
+    )}
+  </div>
+}
+
+export default App

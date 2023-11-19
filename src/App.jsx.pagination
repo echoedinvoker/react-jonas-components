@@ -1,0 +1,30 @@
+import { CaretLeft, CaretRight } from "@phosphor-icons/react"
+
+function App() {
+  return (
+    <div className="flex items-center gap-2 mt-[100px]">
+      <button
+        className="w-8 h-8 rounded-full flex items-center justify-center border 
+        border-teal-700 text-teal-700 hover:bg-teal-700 hover:text-teal-50"
+      >
+        <CaretLeft weight="bold" />
+      </button>
+      <a href="#" className="page-link">1</a>
+      <a href="#" className="page-link">2</a>
+      <a href="#" className="page-link current">3</a>
+      <a href="#" className="page-link">4</a>
+      <a href="#" className="page-link">5</a>
+      <a href="#" className="page-link">6</a>
+      <span>...</span>
+      <a href="#" className="page-link">23</a>
+      <button
+        className="w-8 h-8 rounded-full flex items-center justify-center border border-teal-700 
+        text-teal-700 hover:bg-teal-700 hover:text-teal-50"
+      >
+        <CaretRight weight="bold" />
+      </button>
+    </div>
+  )
+}
+
+export default App

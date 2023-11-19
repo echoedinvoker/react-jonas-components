@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply flex justify-center
+  }
+
+  /* a { */
+  .page-link:link, .page-link:visited {
+    @apply w-6 h-6 flex items-center justify-center rounded-full text-slate-800
+    /* hover:bg-teal-700 hover:text-teal-50 */
+  }
+
+  .page-link:hover, .page-link:active {
+    @apply bg-teal-700 text-teal-50
+  }
+
+  /* .current { */
+  .page-link.current {
+    @apply bg-teal-700 text-teal-50
+  }
+}

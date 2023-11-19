@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-rubik text-stone-50
+  }
+  .header-bg {
+    background-image: linear-gradient(rgba(34,34,34,0.6),rgba(34,34,34,0.6)), url(hero.jpg);
+    background-size: cover;
+  }
+}

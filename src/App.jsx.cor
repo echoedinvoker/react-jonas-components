@@ -1,0 +1,31 @@
+import { CaretLeft, CaretRight } from "@phosphor-icons/react"
+
+function App() {
+  return <div className="bg-teal-700 w-[800px] mx-auto my-[100px] p-6 px-20 rounded-xl relative flex gap-20 items-center">
+    <img src="haerin.jpg" alt="Haerin" className="w-48 h-48 rounded-xl scale-150 shadow-xl" />
+    <blockquote cite="">
+      <p className="text-base text-teal-100 italic mb-5">
+        "Haerin was born Kang Hae-rin on May 15, 2006 in Seoul, South Korea.
+        Haerin attended school until her second year of middle school in 2020, during which she dropped out to become a trainee. She trained for two and half years before debuting[unconfirmed]."
+      </p>
+      <p className="text-sm text-teal-200">Kang Hae-rin</p>
+      <p className="text-sm text-teal-200">She has a younger sister</p>
+    </blockquote>
+
+    <button className="bg-teal-50 text-teal-700 w-8 h-8 rounded-full shadow-inner hover:shadow-teal-700 flex items-center justify-center
+      absolute top-1/2 left-0 -translate-y-1/2 -translate-x-1/2"
+    >
+      <CaretLeft weight="bold" />
+    </button>
+    <button className="bg-teal-50 text-teal-700 w-8 h-8 rounded-full shadow-inner hover:shadow-teal-700 flex items-center justify-center 
+      absolute top-1/2 right-0 -translate-y-1/2 translate-x-1/2"
+    >
+      <CaretRight weight="bold" />
+    </button>
+    <div className="absolute left-1/2 bottom-0 -translate-x-1/2 translate-y-7 flex gap-3">
+      {Array.from({ length: 4 }, () => <div className="w-3 h-3 rounded-full border-2 border-solid border-teal-700 bg-teal-50 hover:bg-teal-700">&nbsp;</div>)}
+    </div>
+  </div>
+}
+
+export default App
